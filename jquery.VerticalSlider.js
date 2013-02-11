@@ -31,13 +31,18 @@
 			
 				// animate the top element shrinking, pull it off the top, and stick at the end
 				content.children(':first').hide(600, function(){
-					$(this).appendTo(content).show(0);
+					$(this).detach().appendTo(content).show(0);
 				});
 				
 				return false;
 			});
 			
 			prev.click(function(){
+			
+				// hide, then remove the bottom element, then stick it at the top and animating it show
+				content.children(':last').hide(0,function(){
+					$(this).detach().prependTo(content).show(600);
+				});	
 				
 				return false;
 			});
