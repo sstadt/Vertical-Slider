@@ -20,37 +20,24 @@
 			// crop off the last one, then put it at the beginning
 			var tempItem = content.children(':last').detach().prependTo(content);
 			
-			console.log(content.children().height());
-			
 			// then, move the top to the original first's position
-			
 			that.css({ "position": "relative" });
 			content.css({
 				"position": "absolute",
 				"top": "-=" + (content.children().height())
 			});
 			
-			console.log('count: ' + count);
-			console.log('half: ' + half);
-			
-			// -= animate the slider
 			next.click(function(){
-				//var lastPos = that.children(':last').css("top");
 			
-				// push the slider down
-				//that.children().animate({"top":+=(that.children().height())}, 600);
-				
-				// move the first slider element to where the last one was
-				//that.children(':first').css({"top":lastPos});
+				// animate the top element shrinking, pull it off the top, and stick at the end
+				content.children(':first').hide(600, function(){
+					$(this).appendTo(content).show(0);
+				});
 				
 				return false;
 			});
 			
-			// += animate the slider
 			prev.click(function(){
-				// push the slider up
-				
-				// move the last slider element to where the first one was
 				
 				return false;
 			});
