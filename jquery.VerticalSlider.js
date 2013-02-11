@@ -13,7 +13,7 @@
 			// crop off the last item, then put it at the beginning
 			content.children(':last').detach().prependTo(content);
 			
-			// then, move the top to the original first's position
+			// move the top to the original first item's position
 			that.css({ "position": "relative" });
 			content.css({
 				"position": "absolute",

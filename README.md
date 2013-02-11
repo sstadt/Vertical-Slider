@@ -20,12 +20,12 @@ While this allows you a bit of freedom in placing the next and previous
 wherever you like on the page, the content section must be nested in the
 div with the base slider id like so:
 
-<a href="#" id="rolodex-prev">Previous</a>
+```<a href="#" id="rolodex-prev">Previous</a>
 <div id="rolodex">
 	<div id="rolodex-content">
 	</div>
 </div>
-<a href="#" id="rolodex-next">Next</a>
+<a href="#" id="rolodex-next">Next</a>```
 
 Next, you can fill your slider content box with content. Content can be
 anything, but each dom element inside the content div must have a height set
@@ -33,7 +33,7 @@ in CSS (note: while padding within each item is counted in the height, margins
 are not. Using margins within the item styling may result in inaccurate 
 scrolling.):
 
-<style>
+```<style>
 .item { height: 100px; }
 </style>
 <a href="#" id="rolodex-prev">Previous</a>
@@ -53,12 +53,12 @@ scrolling.):
 		</div>
 	</div>
 </div>
-<a href="#" id="rolodex-next">Next</a>
+<a href="#" id="rolodex-next">Next</a>```
 
 Once your HTML and item heights are set, simply use the VerticalScroller function
 on the base scroller DOM element:
 
-$('#rolodex').vslider();
+```$('#rolodex').vslider();```
 
 The plugin will then search for your buttons and content box using the
 provided base id string as a starting point.
