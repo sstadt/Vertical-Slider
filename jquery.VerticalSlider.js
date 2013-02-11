@@ -5,16 +5,13 @@
 		return this.each(function(){
 		
 			var that = $(this),
-				tempNext = '#' + that.attr('id') + '-next',
-				tempPrev = '#' + that.attr('id') + '-prev',
-				tempContent = '#' + that.attr('id') + '-content',
-				next = $(tempNext),
-				prev = $(tempPrev),
-				content = $(tempContent)
+				next = $('#' + that.attr('id') + '-next'),
+				prev = $('#' + that.attr('id') + '-prev'),
+				content = $('#' + that.attr('id') + '-content')
 			;
 			
-			// crop off the last one, then put it at the beginning
-			var tempItem = content.children(':last').detach().prependTo(content);
+			// crop off the last item, then put it at the beginning
+			content.children(':last').detach().prependTo(content);
 			
 			// then, move the top to the original first's position
 			that.css({ "position": "relative" });
