@@ -10,12 +10,8 @@
 				tempContent = '#' + that.attr('id') + '-content',
 				next = $(tempNext),
 				prev = $(tempPrev),
-				content = $(tempContent),
-				count = 0
+				content = $(tempContent)
 			;
-			
-			content.children().each(function(){count++;});
-			var half = Math.floor(count/2);
 			
 			// crop off the last one, then put it at the beginning
 			var tempItem = content.children(':last').detach().prependTo(content);
@@ -39,19 +35,13 @@
 			
 			prev.click(function(){
 			
-				// hide, then remove the bottom element, then stick it at the top and animating it show
+				// hide, then remove the bottom element, then stick it at the top and show
 				content.children(':last').hide(0,function(){
 					$(this).detach().prependTo(content).show(600);
 				});	
 				
 				return false;
 			});
-			
-			//$(".contentbox-wrapper").animate({"left": -($(id).position().left)}, 600);
-			
-			console.log(that);
-			console.log(next);
-			console.log(prev);
 			
 		});
 		
