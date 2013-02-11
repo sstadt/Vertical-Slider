@@ -11,7 +11,9 @@ html { background-image: url('http://www.scottstadt.com/portfolio/Vertical-Slide
 .nav:active { background-color: #393530; }
 
 #v-slider { clear: both; overflow: hidden; width: 780px; height: 470px; padding: 20px 10px; }
-.item { overflow: hidden; margin-bottom: 20px; width: 780px; background-color: rgba(0, 0, 60, 0.2); }
+#v-slider-content, #v-slider-item { width: 780px; margin: 0; }
+#v-slider-item { overflow: hidden; height: 490px; }
+.item { overflow: hidden; padding-bottom: 20px; width: 780px; height: 225px; background-color: rgba(0, 0, 60, 0.2); }
 .item img { float: left; }
 .item div { float: left; width: 380px; margin-left: 20px; }
 		</style>
@@ -24,142 +26,145 @@ html { background-image: url('http://www.scottstadt.com/portfolio/Vertical-Slide
 			<a href="#" id="v-slider-prev" class="nav">Previous</a>
 			<div id="v-slider">
 			
-				<div class="v-slider-item">
-					<div class="item">
-						<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/naoplaying.jpg" height="225" width="360" />
-						<div>
-							<h2>NaoPlaying</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-						</div>
-					</div><!-- .item -->
-					<div class="item">
-						<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/audioapp.jpg" height="225" width="360" />
-						<div>
-							<h2>Audio application</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-						</div>
-					</div><!-- .item -->
-				</div><!-- .v-slider-item -->
-			
-				<div class="v-slider-item">
-					<div class="item">
-						<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/naoplaying.jpg" height="225" width="360" />
-						<div>
-							<h2>NaoPlaying</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-						</div>
-					</div><!-- .item -->
-					<div class="item">
-						<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/audioapp.jpg" height="225" width="360" />
-						<div>
-							<h2>Audio application</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-						</div>
-					</div><!-- .item -->
-				</div><!-- .v-slider-item -->
-			
-				<div class="v-slider-item">
-					<div class="item">
-						<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/naoplaying.jpg" height="225" width="360" />
-						<div>
-							<h2>Friendface</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-						</div>
-					</div><!-- .item -->
-					<div class="item">
-						<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/audioapp.jpg" height="225" width="360" />
-						<div>
-							<h2>Audio application</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-						</div>
-					</div><!-- .item -->
-				</div><!-- .v-slider-item -->
-			
-				<div class="v-slider-item">
-					<div class="item">
-						<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/naoplaying.jpg" height="225" width="360" />
-						<div>
-							<h2>WeTeach</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-						</div>
-					</div><!-- .item -->
-					<div class="item">
-						<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/audioapp.jpg" height="225" width="360" />
-						<div>
-							<h2>Audio application</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-						</div>
-					</div><!-- .item -->
-				</div><!-- .v-slider-item -->
-			
-				<div class="v-slider-item">
-					<div class="item">
-						<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/naoplaying.jpg" height="225" width="360" />
-						<div>
-							<h2>CharacterTracker</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-						</div>
-					</div><!-- .item -->
-					<div class="item">
-						<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/audioapp.jpg" height="225" width="360" />
-						<div>
-							<h2>Audio application</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-						</div>
-					</div><!-- .item -->
-				</div><!-- .v-slider-item -->
-			
-				<div class="v-slider-item">
-					<div class="item">
-						<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/naoplaying.jpg" height="225" width="360" />
-						<div>
-							<h2>Web Graphics</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-						</div>
-					</div><!-- .item -->
-					<div class="item">
-						<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/audioapp.jpg" height="225" width="360" />
-						<div>
-							<h2>Audio application</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-						</div>
-					</div><!-- .item -->
-				</div><!-- .v-slider-item -->
-			
-				<div class="v-slider-item">
-					<div class="item">
-						<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/naoplaying.jpg" height="225" width="360" />
-						<div>
-							<h2>Orlando Carpet Cleaning Services</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-						</div>
-					</div><!-- .item -->
-					<div class="item">
-						<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/audioapp.jpg" height="225" width="360" />
-						<div>
-							<h2>Audio application</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-						</div>
-					</div><!-- .item -->
-				</div><!-- .v-slider-item -->
-			
-				<div class="v-slider-item">
-					<div class="item">
-						<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/naoplaying.jpg" height="225" width="360" />
-						<div>
-							<h2>LCARS Weather Application</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-						</div>
-					</div><!-- .item -->
-					<div class="item">
-						<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/audioapp.jpg" height="225" width="360" />
-						<div>
-							<h2>Audio application</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-						</div>
-					</div><!-- .item -->
-				</div><!-- .v-slider-item -->
+				<div id="v-slider-content">
 				
+					<div class="v-slider-item">
+						<div class="item">
+							<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/naoplaying.jpg" height="225" width="360" />
+							<div>
+								<h2>NaoPlaying</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+							</div>
+						</div><!-- .item -->
+						<div class="item">
+							<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/audioapp.jpg" height="225" width="360" />
+							<div>
+								<h2>Audio application</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+							</div>
+						</div><!-- .item -->
+					</div><!-- .v-slider-item -->
+				
+					<div class="v-slider-item">
+						<div class="item">
+							<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/naoplaying.jpg" height="225" width="360" />
+							<div>
+								<h2>Drawing Application</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+							</div>
+						</div><!-- .item -->
+						<div class="item">
+							<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/audioapp.jpg" height="225" width="360" />
+							<div>
+								<h2>Audio application</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+							</div>
+						</div><!-- .item -->
+					</div><!-- .v-slider-item -->
+			
+					<div class="v-slider-item">
+						<div class="item">
+							<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/naoplaying.jpg" height="225" width="360" />
+							<div>
+								<h2>Friendface</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+							</div>
+						</div><!-- .item -->
+						<div class="item">
+							<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/audioapp.jpg" height="225" width="360" />
+							<div>
+								<h2>Audio application</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+							</div>
+						</div><!-- .item -->
+					</div><!-- .v-slider-item -->
+			
+					<div class="v-slider-item">
+						<div class="item">
+							<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/naoplaying.jpg" height="225" width="360" />
+							<div>
+								<h2>WeTeach</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+							</div>
+						</div><!-- .item -->
+						<div class="item">
+							<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/audioapp.jpg" height="225" width="360" />
+							<div>
+								<h2>Audio application</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+							</div>
+						</div><!-- .item -->
+					</div><!-- .v-slider-item -->
+			
+					<div class="v-slider-item">
+						<div class="item">
+							<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/naoplaying.jpg" height="225" width="360" />
+							<div>
+								<h2>CharacterTracker</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+							</div>
+						</div><!-- .item -->
+						<div class="item">
+							<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/audioapp.jpg" height="225" width="360" />
+							<div>
+								<h2>Audio application</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+							</div>
+						</div><!-- .item -->
+					</div><!-- .v-slider-item -->
+			
+					<div class="v-slider-item">
+						<div class="item">
+							<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/naoplaying.jpg" height="225" width="360" />
+							<div>
+								<h2>Web Graphics</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+							</div>
+						</div><!-- .item -->
+						<div class="item">
+							<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/audioapp.jpg" height="225" width="360" />
+							<div>
+								<h2>Audio application</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+							</div>
+						</div><!-- .item -->
+					</div><!-- .v-slider-item -->
+			
+					<div class="v-slider-item">
+						<div class="item">
+							<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/naoplaying.jpg" height="225" width="360" />
+							<div>
+								<h2>Orlando Carpet Cleaning Services</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+							</div>
+						</div><!-- .item -->
+						<div class="item">
+							<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/audioapp.jpg" height="225" width="360" />
+							<div>
+								<h2>Audio application</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+							</div>
+						</div><!-- .item -->
+					</div><!-- .v-slider-item -->
+			
+					<div class="v-slider-item">
+						<div class="item">
+							<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/naoplaying.jpg" height="225" width="360" />
+							<div>
+								<h2>LCARS Weather Application</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+							</div>
+						</div><!-- .item -->
+						<div class="item">
+							<image src="http://www.scottstadt.com/portfolio/Vertical-Slider/images/audioapp.jpg" height="225" width="360" />
+							<div>
+								<h2>Audio application</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+							</div>
+						</div><!-- .item -->
+					</div><!-- .v-slider-item -->
+					
+				</div><!-- #v-slider-content -->
 				
 			</div><!-- #v-slider -->
 			<a href="#" id="v-slider-next" class="nav">Next</a>

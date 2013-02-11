@@ -14,22 +14,20 @@
 				count = 0
 			;
 			
-			that.children().each(function(){count++;});
+			content.children().each(function(){count++;});
 			var half = Math.floor(count/2);
 			
-			// crop off the second half, one by one, and stick them at the beginning
-			for (var i=0; i<half; i++) {
-				tempItem = that.children(':last').detach();
-				that.prepend(tempItem);
-			}
+			// crop off the last one, then put it at the beginning
+			var tempItem = content.children(':last').detach().prependTo(content);
 			
-			console.log(that.children().eq(half));
+			console.log(content.children().height());
 			
 			// then, move the top to the original first's position
-			that.css({"position":"relative"});
-			that.children().css({
-				"position":"absolute",
-				"top": -=(content.children().eq(half).position().top)
+			
+			that.css({ "position": "relative" });
+			content.css({
+				"position": "absolute",
+				"top": "-=" + (content.children().height())
 			});
 			
 			console.log('count: ' + count);
@@ -37,13 +35,13 @@
 			
 			// -= animate the slider
 			next.click(function(){
-				var lastPos = that.children(':last').css("top");
+				//var lastPos = that.children(':last').css("top");
 			
 				// push the slider down
-				that.children().animate({"top":+=(that.children().height())}, 600);
+				//that.children().animate({"top":+=(that.children().height())}, 600);
 				
 				// move the first slider element to where the last one was
-				that.children(':first').css({"top":lsstPos});
+				//that.children(':first').css({"top":lastPos});
 				
 				return false;
 			});
