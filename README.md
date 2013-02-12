@@ -1,6 +1,8 @@
 Vertical-Slider
 ===============
 
+TODO: Allow the plugin to take a padding argument, to compensate for additional slider item height not counted by the height() method
+
 A vertical slider for showcasing content.
 
 In order to correctly find all the parts of your vertical slider,
@@ -27,11 +29,11 @@ div with the base slider id like so:
 	</div>
 	<a href="#" id="rolodex-next">Next</a>
 
-Next, you can fill your slider content box with content. Content can be
-anything, but each dom element inside the content div must have a height set
-in CSS (note: while padding within each item is counted in the height, margins
-are not. Using margins within the item styling may result in inaccurate 
-scrolling.):
+Next, you can fill your slider content box with content. Content can be anything, but 
+each dom element inside the content div (slider item) must have a height set in CSS, and 
+each slider item must have the same height (note: while padding within each item is 
+counted in the height, margins are not. Using margins within the item styling may result 
+in inaccurate scrolling.):
 
 	<style>
 		.item { height: 100px; }
