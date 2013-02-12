@@ -17,7 +17,7 @@
 			that.css({ "position": "relative" });
 			content.css({
 				"position": "absolute",
-				"top": "-=" + (content.children().height())
+				"margin-top": "-=" + (content.children().height())
 			});
 			
 			next.click(function(){
