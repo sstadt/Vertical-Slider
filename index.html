@@ -10,8 +10,9 @@
 .nav:active { background-color: #393530; }
 
 pre { background-color: #fdffd8; border: 1px solid #aaa; padding: 20px; margin: 20px; }
+em { font-size: 0.8em; }
 
-#gallery-wrapper { width: 400px; float: right; margin: 20px 0 20px 20px; }
+#gallery-wrapper { width: 400px; float: right; margin: 60px 0 20px 20px; }
 #gallery { clear: both; overflow: hidden; width: 400px; height: 300px; line-height: 0px; }
 #gallery-item { height: 300px; margin: 0; }
 		</style>
@@ -71,7 +72,7 @@ pre { background-color: #fdffd8; border: 1px solid #aaa; padding: 20px; margin: 
 &lt;a href="#" id="rolodex-next">Next&lt;/a&gt;
 </code></pre>
 
-		<p>Next, you can fill your slider content box with content. Content can be anything, but each dom element inside the content div (slider item) must have a height set in CSS, and each slider item must have the same height (note: while padding within each item is counted in the height, margins are not. Using margins within the item styling may result in inaccurate scrolling.):</p>
+		<p>Next, you can fill your slider content box with content. Content can be anything, but each dom element inside the content div (slider item) must have a height set in CSS, and each slider item must have the same height:<br/><em>note: while padding within each item is counted in the height, margins are not. Using margins within the item styling may result in inaccurate scrolling.</em></p>
 
 <pre><code>&lt;style&gt;
 	.item { height: 100px; }
