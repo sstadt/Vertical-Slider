@@ -63,37 +63,37 @@ pre { background-color: #fdffd8; border: 1px solid #aaa; padding: 20px; margin: 
 	
 			<p>While this allows you a bit of freedom in placing the next and previous wherever you like on the page, the content section must be nested in the div with the base slider id like so:</p>
 
-<pre><code>&lt;a href="#" id="rolodex-prev">Previous&lt;/a&rt;
-&lt;div id="rolodex"&rt;
-	&lt;div id="rolodex-content"&rt;
-	&lt;/div&rt;
-&lt;/div&rt;
-&lt;a href="#" id="rolodex-next">Next&lt;/a&rt;
+<pre><code>&lt;a href="#" id="rolodex-prev">Previous&lt;/a&gt;
+&lt;div id="rolodex"&gt;
+	&lt;div id="rolodex-content"&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;a href="#" id="rolodex-next">Next&lt;/a&gt;
 </code></pre>
 
 		<p>Next, you can fill your slider content box with content. Content can be anything, but each dom element inside the content div (slider item) must have a height set in CSS, and each slider item must have the same height (note: while padding within each item is counted in the height, margins are not. Using margins within the item styling may result in inaccurate scrolling.):</p>
 
-<pre><code>&lt;style&rt;
+<pre><code>&lt;style&gt;
 	.item { height: 100px; }
-&lt;/style&rt;
-&lt;a href="#" id="rolodex-prev"&rt;Previous&lt;/a&rt;
-&lt;div id="rolodex"&rt;
-	&lt;div id="rolodex-content"&rt;
-		&lt;div class="item"&rt;
-			&lt;p&rt;Some Content.&lt;/p&rt;
-		&lt;/div&rt;
-		&lt;div class="item"&rt;
-			&lt;p&rt;Some More Content.&lt;/p&rt;
-		&lt;/div&rt;
-		&lt;div class="item"&rt;
-			&lt;p&rt;Even More Content.&lt;/p&rt;
-		&lt;/div&rt;
-		&lt;div class="item"&rt;
-			&lt;p&rt;Yet Still More Content.&lt;/p&rt;
-		&lt;/div&rt;
-	&lt;/div&rt;
-&lt;/div&rt;
-&lt;a href="#" id="rolodex-next">Next&lt;/a&rt;
+&lt;/style&gt;
+&lt;a href="#" id="rolodex-prev"&gt;Previous&lt;/a&gt;
+&lt;div id="rolodex"&gt;
+	&lt;div id="rolodex-content"&gt;
+		&lt;div class="item"&gt;
+			&lt;p&gt;Some Content.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="item"&gt;
+			&lt;p&gt;Some More Content.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="item"&gt;
+			&lt;p&rt;Even More Content.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="item"&gt;
+			&lt;p&rt;Yet Still More Content.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;a href="#" id="rolodex-next"&gt;Next&lt;/a&gt;
 </code></pre>
 
 			<p>Once your HTML and item heights are set, simply use the VerticalSlider function on the base slider DOM element:</p>
