@@ -9,57 +9,108 @@
 .nav { text-align: center; text-decoration: none; color: #fff; display: block; padding: 10px; background-color: #262320; border: 1px solid #000; }
 .nav:active { background-color: #393530; }
 
-#slider-wrapper { width: 400px; }
+pre { background-color: #fdffd8; border: 1px solid #aaa; padding: 20px; margin: 20px; }
 
-#v-slider { clear: both; overflow: hidden; width: 400px; height: 300px; line-height: 0px; }
-#v-slider-item { height: 300px; margin: 0; }
+#gallery-wrapper { width: 400px; float: right; margin: 20px 0 20px 20px; }
+#gallery { clear: both; overflow: hidden; width: 400px; height: 300px; line-height: 0px; }
+#gallery-item { height: 300px; margin: 0; }
 		</style>
 	</head>
 	<body>
 		
 		<div id="wrapper">
 		
-			<div id="slider-wrapper">
+			<div id="gallery-wrapper">
 			
-				<a href="#" id="v-slider-prev" class="nav">Previous</a>
-				<div id="v-slider">
+				<a href="#" id="gallery-prev" class="nav">Previous</a>
+				<div id="gallery">
 			
-					<div id="v-slider-content">
+					<div id="gallery-content">
 			
-						<div class="v-slider-item">
+						<div class="gallery-item">
 							<img src="http://www.scottstadt.com/portfolio/v-slider/images/bear.jpg" height="300" width="400" />
-						</div><!-- .v-slider-item -->
+						</div><!-- .gallery-item -->
 			
-						<div class="v-slider-item">
+						<div class="gallery-item">
 							<img src="http://www.scottstadt.com/portfolio/v-slider/images/crocodile.jpg" height="300" width="400" />
-						</div><!-- .v-slider-item -->
+						</div><!-- .gallery-item -->
 			
-						<div class="v-slider-item">
+						<div class="gallery-item">
 							<img src="http://www.scottstadt.com/portfolio/v-slider/images/lion.jpg" height="300" width="400" />
-						</div><!-- .v-slider-item -->
+						</div><!-- .gallery-item -->
 			
-						<div class="v-slider-item">
+						<div class="gallery-item">
 							<img src="http://www.scottstadt.com/portfolio/v-slider/images/tiger.jpg" height="300" width="400" />
-						</div><!-- .v-slider-item -->
+						</div><!-- .gallery-item -->
 			
-						<div class="v-slider-item">
+						<div class="gallery-item">
 							<img src="http://www.scottstadt.com/portfolio/v-slider/images/vulture.jpg" height="300" width="400" />
-						</div><!-- .v-slider-item -->
+						</div><!-- .gallery-item -->
 					
-					</div><!-- #v-slider-content -->
+					</div><!-- #gallery-content -->
 				
-				</div><!-- #v-slider -->
-				<a href="#" id="v-slider-next" class="nav">Next</a>
+				</div><!-- #gallery -->
+				<a href="#" id="gallery-next" class="nav">Next</a>
 				
 			</div><!-- #slider-wrapper -->
 			
+			<h1>Vertical-Slider</h1>
+
+			<p>In order to correctly find all the parts of your vertical slider, the plugin needs to know how to find a few things: the slider window, the next button, the previous button, and the slider content.</p>
+			<p>To label these things properly, pick an id for your slider, and then append -next, -prev, and -content to derive the proper id for each component. For instance, with a slider id of 'rolodex', you would derive the following ids for each component of the slider:</p>
+
+			<p>rolodex-next<br/>rolodex-prev<br/>rolodex-content</p>
+	
+			<p>While this allows you a bit of freedom in placing the next and previous wherever you like on the page, the content section must be nested in the div with the base slider id like so:</p>
+
+<pre><code>&lt;a href="#" id="rolodex-prev">Previous&lt;/a&rt;
+&lt;div id="rolodex"&rt;
+	&lt;div id="rolodex-content"&rt;
+	&lt;/div&rt;
+&lt;/div&rt;
+&lt;a href="#" id="rolodex-next">Next&lt;/a&rt;
+</code></pre>
+
+		<p>Next, you can fill your slider content box with content. Content can be anything, but each dom element inside the content div (slider item) must have a height set in CSS, and each slider item must have the same height (note: while padding within each item is counted in the height, margins are not. Using margins within the item styling may result in inaccurate scrolling.):</p>
+
+<pre><code>&lt;style&rt;
+	.item { height: 100px; }
+&lt;/style&rt;
+&lt;a href="#" id="rolodex-prev"&rt;Previous&lt;/a&rt;
+&lt;div id="rolodex"&rt;
+	&lt;div id="rolodex-content"&rt;
+		&lt;div class="item"&rt;
+			&lt;p&rt;Some Content.&lt;/p&rt;
+		&lt;/div&rt;
+		&lt;div class="item"&rt;
+			&lt;p&rt;Some More Content.&lt;/p&rt;
+		&lt;/div&rt;
+		&lt;div class="item"&rt;
+			&lt;p&rt;Even More Content.&lt;/p&rt;
+		&lt;/div&rt;
+		&lt;div class="item"&rt;
+			&lt;p&rt;Yet Still More Content.&lt;/p&rt;
+		&lt;/div&rt;
+	&lt;/div&rt;
+&lt;/div&rt;
+&lt;a href="#" id="rolodex-next">Next&lt;/a&rt;
+</code></pre>
+
+			<p>Once your HTML and item heights are set, simply use the VerticalSlider function on the base slider DOM element:</p>
+
+<pre><code>$('#rolodex').vslider();
+</code></pre>
+
+			<p>The plugin will then search for your buttons and content box using the provided base id string as a starting point.</p>
+
+	
 		</div><!-- #wrapper -->
 		
 		<!-- javascript -->
 		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<script type="text/javascript" src="jquery.VerticalSlider.js"></script>
 		<script type="text/javascript">
-			$('#v-slider').vslider();
+			$('#gallery').vslider();
 		</script>
 	</body>
 </html>
