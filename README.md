@@ -1,7 +1,7 @@
 Vertical-Slider
 ===============
 
-	[ ] Update the individual items in index.html to use different images and titles
+	[x] Update the individual items in index.html to use different images
 	[ ] Allow the plugin to take an argument to control the speed of the animations
 	[ ] Allow the plugin to take a padding argument, to compensate for additional slider item height not counted by the height() method
 
