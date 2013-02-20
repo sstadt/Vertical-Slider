@@ -1,8 +1,11 @@
-Vertical-Slider
+Vertical Slider
 ===============
 
 	[x] Allow the plugin to take an argument to control the speed of the animations
 	[ ] Allow the plugin to take a padding argument, to compensate for additional slider item height not counted by the height() method
+
+Setting Up Your Slider
+----------------------
 
 In order to correctly find all the parts of your vertical slider,
 the plugin needs to know how to find a few things: the slider window,
@@ -61,14 +64,23 @@ on the base slider DOM element:
 
 	$('#rolodex').vslider();
 
-The plugin will then search for your buttons and content box using the
-provided base id string as a starting point. The vslider() function will also 
-take an options object the further customize the slider. Available options 
-include:
+The plugin will then search for your buttons and content box using the provided 
+base id string as a starting point. For more examples, view the source for this page!
+Tip: If you're having trouble with extra padding on your item divs, set the line-height 
+of the base id div, rolodex in this example, to 0 in your page's css.
+
+Further Customization
+---------------------
+
+The vslider() function will also take an options object to further customize the slider.
 
 duration
 default: 600
 The time to complete the slider animation, in milliseconds.
+
+auto
+default: 0
+The time in milliseconds before the slider auto scrolls to the next element. Disabled when set to 0.
 
 easing
 default: 'swing' 
