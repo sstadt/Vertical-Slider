@@ -1,8 +1,7 @@
 Vertical-Slider
 ===============
 
-	[x] Update the individual items in index.html to use different images
-	[ ] Allow the plugin to take an argument to control the speed of the animations
+	[x] Allow the plugin to take an argument to control the speed of the animations
 	[ ] Allow the plugin to take a padding argument, to compensate for additional slider item height not counted by the height() method
 
 In order to correctly find all the parts of your vertical slider,
@@ -63,7 +62,17 @@ on the base slider DOM element:
 	$('#rolodex').vslider();
 
 The plugin will then search for your buttons and content box using the
-provided base id string as a starting point.
+provided base id string as a starting point. The vslider() function will also 
+take an options object the further customize the slider. Available options 
+include:
+
+duration
+The time to complete the slider animation, in milliseconds.
+default: 600
+
+easing
+The easing string to apply to the slider animation.
+default: 'swing' 
 
 
 

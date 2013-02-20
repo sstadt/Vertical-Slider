@@ -1,6 +1,11 @@
 (function($){
 
-	$.fn.vslider = function(){
+	$.fn.vslider = function(options){
+	
+		options = $.extend({
+			duration: 600,
+			easing: 'swing'
+		}, options);
 		
 		return this.each(function(){
 		
@@ -31,8 +36,12 @@
 					vsToggle();
 			
 					// animate the top element shrinking, pull it off the top, and stick at the end
-					content.children(':first').hide(600, function(){
-						$(this).detach().appendTo(content).show(0,vsToggle);
+					content.children(':first').hide({
+						duration: options.duration, 
+						easing: options.easing,
+						complete: function(){
+							$(this).detach().appendTo(content).show(0,vsToggle);
+						}
 					});
 				
 				}
@@ -48,7 +57,11 @@
 			
 					// hide, then remove the bottom element, then stick it at the top and show
 					content.children(':last').hide(0,function(){
-						$(this).detach().prependTo(content).slideDown(600,vsToggle);
+						$(this).detach().prependTo(content).slideDown({
+							duration: options.duration,
+							easing: options.easing,
+							complete: vsToggle
+						});
 					});
 				
 				}
