@@ -5,8 +5,9 @@
 		<title>jQuery Vertical Slider Plugin</title>
 		<style>
 html { background-color: #4d4341; color: #fbf5d3; }
+html, body { margin: 0; padding: 0; }
 header { width: 100%; }
-#wrapper { font-family: Calibri, Arial, sans-serif; width: 800px; margin: 0 auto; overflow: hidden; }
+.wrapper { font-family: Calibri, Arial, sans-serif; width: 800px; margin: 0 auto; overflow: hidden; }
 
 .nav { text-align: center; text-decoration: none; color: #fbf5d3; display: block; padding: 10px; background-color: #0d0d15; border: 1px solid #0d0d15; }
 .nav:active { background-color: #252a2e; }
@@ -16,18 +17,48 @@ dd { margin: 5px 0 10px 10px; }
 pre { clear: both; background-color: #84786a; color: #252a2e; border: 1px solid #252a2e; padding: 20px; margin: 20px; }
 em { font-size: 0.8em; }
 
+#slider { margin: 0 auto; line-height: 0; height: 250px; width: 100%; }
+#slider-item { height: 250px; margin: 0; }
+
 #gallery-wrapper { width: 400px; float: right; margin: 20px 0 20px 20px; }
-#gallery { clear: both; overflow: hidden; width: 400px; height: 300px; line-height: 0px; }
+#gallery { clear: both; width: 400px; height: 300px; line-height: 0px; }
 #gallery-item { height: 300px; margin: 0; }
 		</style>
 	</head>
 	<body>
 		
-		<div id="wrapper">
-		
-			<div id="header">
+		<div id="header">
+			<div class="wrapper">
 				<h1>Vertical-Slider</h1>
-			</div><!-- #header -->
+			</div>
+			<div id="slider">
+				<div id="slider-content">
+			
+					<div class="slider-item">
+						<img src="http://www.scottstadt.com/portfolio/v-slider/images/jungle.jpg" height="250" width="1920" />
+					</div><!-- .gallery-item -->
+			
+					<div class="slider-item">
+						<img src="http://www.scottstadt.com/portfolio/v-slider/images/sunset.jpg" height="250" width="1920" />
+					</div><!-- .gallery-item -->
+			
+					<div class="slider-item">
+						<img src="http://www.scottstadt.com/portfolio/v-slider/images/dunes.jpg" height="250" width="1920" />
+					</div><!-- .gallery-item -->
+			
+					<div class="slider-item">
+						<img src="http://www.scottstadt.com/portfolio/v-slider/images/canopy.jpg" height="250" width="1920" />
+					</div><!-- .gallery-item -->
+			
+					<div class="slider-item">
+						<img src="http://www.scottstadt.com/portfolio/v-slider/images/trees.jpg" height="250" width="1920" />
+					</div><!-- .gallery-item -->
+					
+				</div>
+			</div>
+		</div><!-- #header -->
+		
+		<div class="wrapper">
 		
 			<div id="content">
 				<div id="gallery-wrapper">
@@ -114,10 +145,12 @@ em { font-size: 0.8em; }
 				<p>The plugin will then search for your buttons and content box using the provided base id string as a starting point. For more examples, view the source for this page!<br/><em>Tip: If you're having trouble with extra padding on your item divs, set the line-height of the base id div, rolodex in this example, to 0 in your page's css.</em></p>
 				
 				<h3>Further Customization</h3>
-				<p>The vslider() function will also take an options object the further customize the slider.</p>
+				<p>The vslider() function will also take an options object to further customize the slider.</p>
 				<dl>
 					<dt>duration</dt>
 					<dd><em>default: 600</em><br/>The time to complete the slider animation, in milliseconds.</dd>
+					<dt>auto</dt>
+					<dd><em>default: 0</em><br/>The time in milliseconds before the slider auto scrolls to the next element. Disabled when set to 0.</dd>
 					<dt>easing</dt>
 					<dd><em>default: 'swing'</em><br/>The easing string to apply to the slider animation.</dd>
 				</dl>
@@ -131,6 +164,9 @@ em { font-size: 0.8em; }
 		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<script type="text/javascript" src="jquery.VerticalSlider.js"></script>
 		<script type="text/javascript">
+			$('#slider').vslider({
+				auto: 8000
+			});
 			$('#gallery').vslider();
 		</script>
 	</body>
