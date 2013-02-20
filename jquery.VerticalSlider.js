@@ -13,7 +13,7 @@
 				next = $('#' + that.attr('id') + '-next'),
 				prev = $('#' + that.attr('id') + '-prev'),
 				content = $('#' + that.attr('id') + '-content'),
-				active = true;
+				active = true,
 				vsToggle = function(){
 					active = !active;
 				}

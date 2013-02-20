@@ -67,12 +67,12 @@ take an options object the further customize the slider. Available options
 include:
 
 duration
-The time to complete the slider animation, in milliseconds.
 default: 600
+The time to complete the slider animation, in milliseconds.
 
 easing
-The easing string to apply to the slider animation.
 default: 'swing' 
+The easing string to apply to the slider animation.
 
 
 

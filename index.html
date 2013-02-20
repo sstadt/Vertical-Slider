@@ -4,19 +4,19 @@
 		<meta charset="UTF-8" />
 		<title>jQuery Vertical Slider Plugin</title>
 		<style>
+html { background-color: #4d4341; color: #fbf5d3; }
 header { width: 100%; }
 #wrapper { font-family: Calibri, Arial, sans-serif; width: 800px; margin: 0 auto; overflow: hidden; }
 
-.nav { text-align: center; text-decoration: none; color: #fff; display: block; padding: 10px; background-color: #262320; border: 1px solid #000; }
-.nav:active { background-color: #393530; }
+.nav { text-align: center; text-decoration: none; color: #fbf5d3; display: block; padding: 10px; background-color: #0d0d15; border: 1px solid #0d0d15; }
+.nav:active { background-color: #252a2e; }
 
-dt { color: #103768; }
 dd { margin: 5px 0 10px 10px; }
 
-pre { background-color: #fdffd8; border: 1px solid #aaa; padding: 20px; margin: 20px; }
+pre { clear: both; background-color: #84786a; color: #252a2e; border: 1px solid #252a2e; padding: 20px; margin: 20px; }
 em { font-size: 0.8em; }
 
-#gallery-wrapper { width: 400px; float: right; margin: 0 0 20px 20px; }
+#gallery-wrapper { width: 400px; float: right; margin: 20px 0 20px 20px; }
 #gallery { clear: both; overflow: hidden; width: 400px; height: 300px; line-height: 0px; }
 #gallery-item { height: 300px; margin: 0; }
 		</style>
@@ -63,6 +63,8 @@ em { font-size: 0.8em; }
 					<a href="#" id="gallery-next" class="nav">Next</a>
 				
 				</div><!-- #gallery-wrapper -->
+				
+				<h3>Setting Up Your slider</h3>
 
 				<p>In order to correctly find all the parts of your vertical slider, the plugin needs to know how to find a few things: the slider window, the next button, the previous button, and the slider content.</p>
 				<p>To label these things properly, pick an id for your slider, and then append -next, -prev, and -content to derive the proper id for each component. For instance, with a slider id of 'rolodex', you would derive the following ids for each component of the slider:</p>
@@ -109,12 +111,15 @@ em { font-size: 0.8em; }
 <pre><code>$('#rolodex').vslider();
 </code></pre>
 
-				<p>The plugin will then search for your buttons and content box using the provided base id string as a starting point. The vslider() function will also take an options object the further customize the slider. Available options include:</p>
+				<p>The plugin will then search for your buttons and content box using the provided base id string as a starting point. For more examples, view the source for this page!<br/><em>Tip: If you're having trouble with extra padding on your item divs, set the line-height of the base id div, rolodex in this example, to 0 in your page's css.</em></p>
+				
+				<h3>Further Customization</h3>
+				<p>The vslider() function will also take an options object the further customize the slider.</p>
 				<dl>
 					<dt>duration</dt>
-					<dd>The time to complete the slider animation, in milliseconds.<br/><em>default: 600</em></dd>
+					<dd><em>default: 600</em><br/>The time to complete the slider animation, in milliseconds.</dd>
 					<dt>easing</dt>
-					<dd>The easing string to apply to the slider animation.<br/><em>default: 'swing'</em></dd>
+					<dd><em>default: 'swing'</em><br/>The easing string to apply to the slider animation.</dd>
 				</dl>
 				
 				
