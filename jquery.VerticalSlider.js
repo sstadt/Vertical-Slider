@@ -5,7 +5,8 @@
 		options = $.extend({
 			duration: 600,
 			auto: 0,
-			easing: 'swing'
+			easing: 'swing',
+			view: 1
 		}, options);
 		
 		return this.each(function(){
@@ -56,8 +57,11 @@
 				}
 			;
 			
-			// make sure extra content is not shown
-			that.css('overflow','hidden');
+			// set up the viewport css
+			that.css({
+				'overflow':'hidden',
+				'height':content.children().height() * options.view
+			});
 			
 			// crop off the last item, then put it at the beginning
 			content.children(':last').detach().prependTo(content);

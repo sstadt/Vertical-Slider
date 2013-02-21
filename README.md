@@ -80,5 +80,5 @@ auto - The time in milliseconds before the slider auto scrolls to the next eleme
 
 easing - The easing string to apply to the slider animation. *default: 'swing'*
 
-
+view - the number of items to show in the slider simultaneously. *default: 1*
 
